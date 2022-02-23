@@ -11,7 +11,7 @@ build_property.RootNamespace = Rookie.CustomerSite
 build_property.ProjectDir = D:\NashTech\assignment_rookie\Rookie_ecommerce\Rookie.CustomerSite\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\NashTech\assignment_rookie\Rookie_ecommerce\Rookie.CustomerSite
 build_property._RazorSourceGeneratorDebug = 
 

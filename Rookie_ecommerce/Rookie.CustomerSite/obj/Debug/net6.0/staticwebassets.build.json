@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j4ls+ib+SU+cqHRb9TYBkUAG46W+ZS6JBaUsm+78hgc=",
+  "Hash": "l5ERpaR2u8R7UyWSgL9sTJyynobo47T654OSxkxVZbc=",
   "Source": "Rookie.CustomerSite",
   "BasePath": "_content/Rookie.CustomerSite",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\Rookie.CustomerSite\\wwwroot\\css\\style.css",
+      "SourceId": "Rookie.CustomerSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\Rookie.CustomerSite\\wwwroot\\",
+      "BasePath": "_content/Rookie.CustomerSite",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\Rookie.CustomerSite\\wwwroot\\favicon.ico",
