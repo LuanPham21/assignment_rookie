@@ -1,0 +1,10 @@
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\bin\Debug\netstandard2.1\RookieShop.Shared.deps.json
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\bin\Debug\netstandard2.1\RookieShop.Shared.dll
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\bin\Debug\netstandard2.1\RookieShop.Shared.pdb
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\obj\Debug\netstandard2.1\RookieShop.Shared.csproj.AssemblyReference.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\obj\Debug\netstandard2.1\RookieShop.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\obj\Debug\netstandard2.1\RookieShop.Shared.AssemblyInfoInputs.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\obj\Debug\netstandard2.1\RookieShop.Shared.AssemblyInfo.cs
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\obj\Debug\netstandard2.1\RookieShop.Shared.csproj.CoreCompileInputs.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\obj\Debug\netstandard2.1\RookieShop.Shared.dll
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Shared\obj\Debug\netstandard2.1\RookieShop.Shared.pdb
