@@ -16,7 +16,7 @@ namespace RookieShop.Data.EF
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Image> Images { get; set; }
-        public DbSet<Products_Category> Products_Categories { get; set; }
+        public DbSet<ProductsCategory> ProductsCategories { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }

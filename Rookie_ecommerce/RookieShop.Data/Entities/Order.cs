@@ -4,7 +4,7 @@ namespace RookieShop.Data.Entities
 {
     public class Order
     {
-        public int OrdersId { get; set; }
+        public int Id { get; set; }
         public DateTime OrdersDate { get; set; }
         public int UserId { get; set; }
         public string ShipName { get; set; }
