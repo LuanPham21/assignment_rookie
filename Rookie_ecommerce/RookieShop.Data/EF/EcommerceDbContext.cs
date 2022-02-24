@@ -1,7 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using RookieShop.Backend.Entities;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using RookieShop.Data.Entities;
 
-namespace RookieShop.Backend.EF
+namespace RookieShop.Data.EF
 {
     public class EcommerceDbContext : DbContext
     {
@@ -16,6 +21,7 @@ namespace RookieShop.Backend.EF
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
     }
 }

@@ -1,10 +1,10 @@
-﻿namespace RookieShop.Backend.Entities
+﻿namespace RookieShop.Data.Entities
 {
     public class Image
     {
-        public int ImageID { get; set; }
+        public int Id { get; set; }
         public string ImageLink { get; set; }
-        public int ProductID { get; set; }
+        public int ProductId { get; set; }
 
     }
 }

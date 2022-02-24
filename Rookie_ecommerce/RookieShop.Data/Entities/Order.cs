@@ -1,15 +1,17 @@
-﻿namespace RookieShop.Backend.Entities
+﻿using RookieShop.Data.Enums;
+
+namespace RookieShop.Data.Entities
 {
     public class Order
     {
-        public int OrdersID { get; set; }
+        public int OrdersId { get; set; }
         public DateTime OrdersDate { get; set; }
-        public int UserID { get; set; }
+        public int UserId { get; set; }
         public string ShipName { get; set; }
         public string ShipAddress { get; set; }
         public string ShipEmail { get; set; }
         public int ShipPhoneNumber { get; set; }
-        public string Status { get; set; }
+        public Status Status { get; set; }
         public int Total { get; set; }
 
     }
