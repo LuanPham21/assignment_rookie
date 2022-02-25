@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using RookieShop.Data.Entities;
 using RookieShop.Data.Enums;
 using System;
@@ -68,6 +69,35 @@ namespace RookieShop.Data.Extensions
                     CategoryId = 2,
                     ProductId = 2
                 });
+            var Role_ID = new Guid("84C8304C-C52A-42BF-A985-36FB0B00743B");
+            var User_ID = new Guid("5A33F896-2359-44FF-82FD-B6D33786AC2A");
+            modelBuilder.Entity<AppRole>().HasData(new AppRole
+            {
+                Id = Role_ID,
+                Name ="admin",
+                NormalizedName = "admin",
+                Description = "Adminstrator role"
+            });
+            var hasher = new PasswordHasher<AppUser>();
+            modelBuilder.Entity<AppUser>().HasData(new AppUser
+            {
+                Id = User_ID,
+                UserName = "admin",
+                NormalizedUserName = "admin",
+                Email = "luanhuu2000@gmail.com",
+                NormalizedEmail = "luanhuu2000@gmail.com",
+                EmailConfirmed = true,
+                PasswordHash =hasher.HashPassword(null,"123456"),
+                SecurityStamp = string.Empty,
+                FirstName = "Luan",
+                LastName = "Pham",
+                Dob = new DateTime(2022,02,22)
+            });
+            modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(new IdentityUserRole<Guid>
+            {
+                RoleId = Role_ID,
+                UserId = User_ID,
+            });
         }
     }
 }
