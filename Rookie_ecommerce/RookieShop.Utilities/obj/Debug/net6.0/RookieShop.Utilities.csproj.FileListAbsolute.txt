@@ -1,0 +1,12 @@
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\bin\Debug\net6.0\RookieShop.Utilities.deps.json
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\bin\Debug\net6.0\RookieShop.Utilities.dll
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\bin\Debug\net6.0\RookieShop.Utilities.pdb
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\obj\Debug\net6.0\RookieShop.Utilities.csproj.AssemblyReference.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\obj\Debug\net6.0\RookieShop.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\obj\Debug\net6.0\RookieShop.Utilities.AssemblyInfoInputs.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\obj\Debug\net6.0\RookieShop.Utilities.AssemblyInfo.cs
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\obj\Debug\net6.0\RookieShop.Utilities.csproj.CoreCompileInputs.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\obj\Debug\net6.0\RookieShop.Utilities.dll
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\obj\Debug\net6.0\refint\RookieShop.Utilities.dll
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\obj\Debug\net6.0\RookieShop.Utilities.pdb
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Utilities\obj\Debug\net6.0\ref\RookieShop.Utilities.dll

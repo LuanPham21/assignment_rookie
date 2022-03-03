@@ -21,7 +21,7 @@ namespace RookieShop.Data.Configurations
             builder.Property(x => x.ShipEmail).IsRequired().IsUnicode(false).HasMaxLength(50);
             builder.Property(x => x.ShipAddress).IsRequired().HasMaxLength(200);
             builder.Property(x => x.ShipPhoneNumber).IsRequired().HasMaxLength(20);
-            builder.Property(x => x.OrdersDate).HasDefaultValue(DateTime.Now);
+            builder.Property(x => x.OrdersDate);
             builder.Property(x => x.Status).HasDefaultValue(OrderStatus.InProgress);
             builder.HasOne(x => x.AppUser).WithMany(x => x.Orders).HasForeignKey(x => x.UserId);
         }

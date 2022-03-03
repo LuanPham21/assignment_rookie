@@ -16,6 +16,8 @@ namespace RookieShop.Data.Configurations
             builder.ToTable("Images");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
+            builder.Property(x => x.ImageLink).IsRequired(true);
+            builder.Property(x => x.Caption);
             builder.HasOne(x => x.Product).WithMany(x => x.Images).HasForeignKey(x => x.ProductId);
         }
     }
