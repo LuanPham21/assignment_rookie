@@ -1,0 +1,17 @@
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\bin\Debug\net6.0\RookieShop.ViewModel.deps.json
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\bin\Debug\net6.0\RookieShop.ViewModel.runtimeconfig.json
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\bin\Debug\net6.0\RookieShop.ViewModel.dll
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\bin\Debug\net6.0\RookieShop.ViewModel.pdb
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\bin\Debug\net6.0\RookieShop.Data.dll
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\bin\Debug\net6.0\RookieShop.Data.pdb
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\RookieShop.ViewModel.csproj.AssemblyReference.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\RookieShop.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\RookieShop.ViewModel.AssemblyInfoInputs.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\RookieShop.ViewModel.AssemblyInfo.cs
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\RookieShop.ViewModel.csproj.CoreCompileInputs.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\RookieShop.ViewModel.csproj.CopyComplete
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\RookieShop.ViewModel.dll
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\refint\RookieShop.ViewModel.dll
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\RookieShop.ViewModel.pdb
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\RookieShop.ViewModel.genruntimeconfig.cache
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.ViewModel\obj\Debug\net6.0\ref\RookieShop.ViewModel.dll
