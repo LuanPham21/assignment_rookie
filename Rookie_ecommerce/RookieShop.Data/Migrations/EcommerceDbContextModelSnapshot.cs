@@ -154,7 +154,7 @@ namespace RookieShop.Data.Migrations
                         new
                         {
                             Id = new Guid("84c8304c-c52a-42bf-a985-36fb0b00743b"),
-                            ConcurrencyStamp = "25a17fd8-fc03-4978-9e87-4f9dbacc800c",
+                            ConcurrencyStamp = "d9f84124-4989-46a2-9ce0-50de2aa7172e",
                             Description = "Adminstrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -176,7 +176,7 @@ namespace RookieShop.Data.Migrations
                     b.Property<DateTime>("Dob")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 2, 22, 30, 13, 124, DateTimeKind.Local).AddTicks(4097));
+                        .HasDefaultValue(new DateTime(2022, 3, 3, 19, 16, 57, 809, DateTimeKind.Local).AddTicks(8312));
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -233,7 +233,7 @@ namespace RookieShop.Data.Migrations
                         {
                             Id = new Guid("5a33f896-2359-44ff-82fd-b6d33786ac2a"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d12041bd-7302-4c26-ae47-a48bc01096f8",
+                            ConcurrencyStamp = "eff71da9-499a-45ee-8d71-59f15f02e3bd",
                             Dob = new DateTime(2022, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "luanhuu2000@gmail.com",
                             EmailConfirmed = true,
@@ -242,7 +242,7 @@ namespace RookieShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "luanhuu2000@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAELbLcSY1ooQdXcWjPDx0D8BywXN8hknrvdLpymdmC7/AGVpdE64sespMpX+ivSv9tw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKTDhcTc2AmlLTasRzR/bSLM00NqZIoG0EoBkTTirlytPnbCOHO2WsihNs7lB1nfjg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -516,7 +516,7 @@ namespace RookieShop.Data.Migrations
                             Price = 20000m,
                             Quantity = 100,
                             Status = 1,
-                            TimeCreate = new DateTime(2022, 3, 2, 22, 30, 13, 124, DateTimeKind.Local).AddTicks(6199),
+                            TimeCreate = new DateTime(2022, 3, 3, 19, 16, 57, 810, DateTimeKind.Local).AddTicks(393),
                             ViewCount = 1
                         },
                         new
@@ -529,7 +529,7 @@ namespace RookieShop.Data.Migrations
                             Price = 20000m,
                             Quantity = 100,
                             Status = 1,
-                            TimeCreate = new DateTime(2022, 3, 2, 22, 30, 13, 124, DateTimeKind.Local).AddTicks(6204),
+                            TimeCreate = new DateTime(2022, 3, 3, 19, 16, 57, 810, DateTimeKind.Local).AddTicks(398),
                             ViewCount = 1
                         });
                 });

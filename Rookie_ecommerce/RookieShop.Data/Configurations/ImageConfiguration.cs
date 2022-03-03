@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 
 namespace RookieShop.Data.Configurations
 {
-    public class ImageConfiguration : IEntityTypeConfiguration<Image>
+    internal class ImageConfiguration : IEntityTypeConfiguration<Image>
     {
         public void Configure(EntityTypeBuilder<Image> builder)
         {
             builder.ToTable("Images");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
-            builder.Property(x => x.ImageLink).IsRequired(true);
             builder.Property(x => x.Caption);
             builder.HasOne(x => x.Product).WithMany(x => x.Images).HasForeignKey(x => x.ProductId);
         }

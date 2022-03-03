@@ -81,3 +81,4 @@ D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Backend\bin\Debug\net6
 D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Backend\bin\Debug\net6.0\RookieShop.Utilities.pdb
 D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Backend\bin\Debug\net6.0\RookieShop.ViewModel.pdb
 D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Backend\bin\Debug\net6.0\Rookie_ecommerce.Application.pdb
+D:\NashTech\assignment_rookie\Rookie_ecommerce\RookieShop.Backend\bin\Debug\net6.0\RookieShop.Backend.staticwebassets.runtime.json

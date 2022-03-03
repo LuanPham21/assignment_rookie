@@ -30,4 +30,8 @@
     <ProjectReference Include="..\Rookie_ecommerce.Application\Rookie_ecommerce.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\user-content\" />
+  </ItemGroup>
+
 </Project>
