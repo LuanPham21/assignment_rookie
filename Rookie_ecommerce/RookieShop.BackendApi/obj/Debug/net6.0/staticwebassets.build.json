@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fNi/OX8F8oN8C6xzFywFvQwgfob6yKf+qI/OEAxV9hA=",
+  "Hash": "K0zmWDGgW6wQGMU5siMj2guqPw6lfFfWG0KJ8Nz4VoQ=",
   "Source": "RookieShop.BackendApi",
   "BasePath": "_content/RookieShop.BackendApi",
   "Mode": "Default",
@@ -1037,6 +1037,57 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\user-content\\4268bb95-2536-47cf-b001-92cfd347aac4.png",
+      "SourceId": "RookieShop.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\",
+      "BasePath": "_content/RookieShop.BackendApi",
+      "RelativePath": "user-content/4268bb95-2536-47cf-b001-92cfd347aac4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-content\\4268bb95-2536-47cf-b001-92cfd347aac4.png"
+    },
+    {
+      "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\user-content\\853afa81-0489-4833-a26b-9c03bf343587.png",
+      "SourceId": "RookieShop.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\",
+      "BasePath": "_content/RookieShop.BackendApi",
+      "RelativePath": "user-content/853afa81-0489-4833-a26b-9c03bf343587.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-content\\853afa81-0489-4833-a26b-9c03bf343587.png"
+    },
+    {
+      "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\user-content\\bdf7351b-0df7-4695-bf13-5d15c165b201.png",
+      "SourceId": "RookieShop.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\",
+      "BasePath": "_content/RookieShop.BackendApi",
+      "RelativePath": "user-content/bdf7351b-0df7-4695-bf13-5d15c165b201.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-content\\bdf7351b-0df7-4695-bf13-5d15c165b201.png"
+    },
+    {
       "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\user-content\\d876f686-ecea-4e28-ad04-b1b809637f7c.png",
       "SourceId": "RookieShop.BackendApi",
       "SourceType": "Discovered",
@@ -1052,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\user-content\\d876f686-ecea-4e28-ad04-b1b809637f7c.png"
+    },
+    {
+      "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\user-content\\f9c553b7-9456-425f-a1f3-a9a8b72c8406.png",
+      "SourceId": "RookieShop.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\",
+      "BasePath": "_content/RookieShop.BackendApi",
+      "RelativePath": "user-content/f9c553b7-9456-425f-a1f3-a9a8b72c8406.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-content\\f9c553b7-9456-425f-a1f3-a9a8b72c8406.png"
     }
   ]
 }
