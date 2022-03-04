@@ -11,7 +11,5 @@ namespace Rookie_ecommerce.Application.Catalog.Products
     public interface IPublicProductService
     {
         Task<PagedResult<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest reuest);
-
-        Task<List<ProductViewModel>> GetAll();
     }
 }

@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie.CustomerSite", "Rook
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RookieShop.Shared", "RookieShop.Shared\RookieShop.Shared.csproj", "{2E0EB382-9A8F-4BCF-9792-5B21EFC727E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RookieShop.Backend", "RookieShop.Backend\RookieShop.Backend.csproj", "{441762FD-CD84-40A9-8C0D-C2E27DF9E026}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RookieShop.Data", "RookieShop.Data\RookieShop.Data.csproj", "{2CFCEC28-364E-4ADB-B5A9-5B0D80DC880D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rookie_ecommerce.Application", "Rookie_ecommerce.Application\Rookie_ecommerce.Application.csproj", "{320BBF52-824F-49AB-BADC-B071E43EFB60}"
@@ -16,6 +14,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RookieShop.Utilities", "RookieShop.Utilities\RookieShop.Utilities.csproj", "{FA039C3E-BA32-4EEB-85E1-39364C762F71}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RookieShop.ViewModel", "RookieShop.ViewModel\RookieShop.ViewModel.csproj", "{9B7DB37B-66B7-4F10-A1BD-1EA5734910E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RookieShop.BackendApi", "RookieShop.BackendApi\RookieShop.BackendApi.csproj", "{7627EDCC-F0F9-4E43-BC6C-6391BE93CCA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,6 @@ Global
 		{2E0EB382-9A8F-4BCF-9792-5B21EFC727E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E0EB382-9A8F-4BCF-9792-5B21EFC727E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E0EB382-9A8F-4BCF-9792-5B21EFC727E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{441762FD-CD84-40A9-8C0D-C2E27DF9E026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{441762FD-CD84-40A9-8C0D-C2E27DF9E026}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{441762FD-CD84-40A9-8C0D-C2E27DF9E026}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{441762FD-CD84-40A9-8C0D-C2E27DF9E026}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2CFCEC28-364E-4ADB-B5A9-5B0D80DC880D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2CFCEC28-364E-4ADB-B5A9-5B0D80DC880D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CFCEC28-364E-4ADB-B5A9-5B0D80DC880D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{9B7DB37B-66B7-4F10-A1BD-1EA5734910E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B7DB37B-66B7-4F10-A1BD-1EA5734910E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B7DB37B-66B7-4F10-A1BD-1EA5734910E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7627EDCC-F0F9-4E43-BC6C-6391BE93CCA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7627EDCC-F0F9-4E43-BC6C-6391BE93CCA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7627EDCC-F0F9-4E43-BC6C-6391BE93CCA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7627EDCC-F0F9-4E43-BC6C-6391BE93CCA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

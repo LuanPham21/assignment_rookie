@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RookieShop.ViewModel.Catalog.Products
 {
-    public interface ProductCreateRequest
+    public class ProductCreateRequest
     {
         public string Name { get; set; }
         public int Quantity { get; set; }

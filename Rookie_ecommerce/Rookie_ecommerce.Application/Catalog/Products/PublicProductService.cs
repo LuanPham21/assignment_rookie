@@ -19,29 +19,6 @@ namespace Rookie_ecommerce.Application.Catalog.Products
             _context = context;
         }
 
-        public async Task<List<ProductViewModel>> GetAll()
-        {
-            var query = from p in _context.Products
-                        join pic in _context.ProductsInCategories on p.Id equals pic.ProductId
-                        join c in _context.Categories on pic.CategoryId equals c.Id
-                        select new { p, pic };
-
-            var data = await query.Select(x => new ProductViewModel()
-            {
-                Id = x.p.Id,
-                Name = x.p.Name,
-                Quantity = x.p.Quantity,
-                OriginalPrice = x.p.OriginalPrice,
-                Price = x.p.Price,
-                Description = x.p.Description,
-                TimeCreate = x.p.TimeCreate,
-                Status = x.p.Status,
-                ViewCount = 0,
-                Details = x.p.Details,
-            }).ToListAsync();
-            return data;
-        }
-
         public async Task<PagedResult<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest reuqest)
         {
             //1 Select join

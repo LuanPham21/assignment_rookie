@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RookieShop.Data.Entities;
 using RookieShop.Data.Enums;
 using System;
@@ -11,7 +12,7 @@ namespace RookieShop.Data.Configurations
 {
     public class ProductConfiguration : IEntityTypeConfiguration<Product>
     {
-        public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Product> builder)
+        public void Configure(EntityTypeBuilder<Product> builder)
         {
             builder.ToTable("Products");
             builder.HasKey(x => x.Id);

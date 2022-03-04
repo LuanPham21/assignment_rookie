@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RookieShop.Data.Configurations
 {
-    internal class ProductsInCategoryConfiguration : IEntityTypeConfiguration<ProductsInCategory>
+    public class ProductsInCategoryConfiguration : IEntityTypeConfiguration<ProductsInCategory>
     {
         public void Configure(EntityTypeBuilder<ProductsInCategory> builder)
         {
