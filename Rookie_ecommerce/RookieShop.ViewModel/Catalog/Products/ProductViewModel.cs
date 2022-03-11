@@ -19,7 +19,7 @@ namespace RookieShop.ViewModel.Catalog.Products
         public Status Status { get; set; }
         public int ViewCount { get; set; }
         public string Details { set; get; }
-        public string ThumbnailImage { get; set; }
+        public string? ThumbnailImage { get; set; }
 
         public List<string> Categories { get; set; } = new List<string>();
     }

@@ -6,6 +6,7 @@ using RookieShop.Utilities.Constants;
 using Rookie_ecommerce.Application.Catalog.Products;
 using Microsoft.OpenApi.Models;
 using Rookie_ecommerce.Application.Common;
+using Rookie_ecommerce.Application.Catalog.Categories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +16,8 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<EcommerceDbContext>(options =>
                     options.UseSqlServer(builder.Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
 builder.Services.AddTransient<IStorageService, FileStorageService>();
-builder.Services.AddTransient<IPublicProductService, PublicProductService>();
-builder.Services.AddTransient<IManageProductService, ManageProductService>();
+builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.AddTransient<ICategoryService, CategoryService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

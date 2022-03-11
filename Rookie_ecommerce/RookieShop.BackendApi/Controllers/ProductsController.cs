@@ -10,21 +10,18 @@ namespace RookieShop.BackendApi.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IPublicProductService _publicProductService;
-        private readonly IManageProductService _manageProductService;
+        private readonly IProductService _productService;
 
-        public ProductsController(IPublicProductService publicProductService,
-                IManageProductService manageProductService)
+        public ProductsController(IProductService productService)
         {
-            _publicProductService = publicProductService;
-            _manageProductService = manageProductService;
+            _productService = productService;
         }
 
         //http://localhost:port/products?PageIndex=1&pagéize=10&CategoryId =
-        [HttpGet("public-paging")]
-        public async Task<IActionResult> GetAllPaging([FromQuery] GetPublicProductPagingRequest request)
+        [HttpGet("paging")]
+        public async Task<IActionResult> GetProductinCategory([FromQuery] int CategoryId)
         {
-            var products = await _publicProductService.GetAllByCategoryId(request);
+            var products = await _productService.GetProductinCategory(CategoryId);
             return Ok(products);
         }
 
@@ -32,7 +29,11 @@ namespace RookieShop.BackendApi.Controllers
         [HttpGet("{productId}")]
         public async Task<IActionResult> GetById(int productId)
         {
-            var products = await _manageProductService.GetById(productId);
+            if (productId == null)
+            {
+                return NotFound();
+            }
+            var products = await _productService.GetById(productId);
             if (products == null)
                 return BadRequest("Cannot find product");
             return Ok(products);
@@ -45,10 +46,10 @@ namespace RookieShop.BackendApi.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var productId = await _manageProductService.Create(request);
+            var productId = await _productService.Create(request);
             if (productId == 0)
                 return BadRequest();
-            var product = await _manageProductService.GetById(productId);
+            var product = await _productService.GetById(productId);
             return CreatedAtAction(nameof(GetById), new { id = productId }, product);
         }
 
@@ -59,7 +60,7 @@ namespace RookieShop.BackendApi.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var affectedResult = await _manageProductService.Update(request);
+            var affectedResult = await _productService.Update(request);
             if (affectedResult == 0)
                 return BadRequest();
             return Ok();
@@ -68,7 +69,7 @@ namespace RookieShop.BackendApi.Controllers
         [HttpDelete("{productId}")]
         public async Task<IActionResult> Delete(int productId)
         {
-            var affectedResult = await _manageProductService.Delete(productId);
+            var affectedResult = await _productService.Delete(productId);
             if (affectedResult == 0)
                 return BadRequest();
             return Ok();
@@ -77,7 +78,7 @@ namespace RookieShop.BackendApi.Controllers
         [HttpPatch("{productId}/{newPrice}")]
         public async Task<IActionResult> UpdatePrice(int productId, decimal newPrice)
         {
-            var isSuccessful = await _manageProductService.UpdatePrice(productId, newPrice);
+            var isSuccessful = await _productService.UpdatePrice(productId, newPrice);
             if (isSuccessful)
                 return Ok();
             return BadRequest();
@@ -91,11 +92,11 @@ namespace RookieShop.BackendApi.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var imageId = await _manageProductService.AddImages(productId, request);
+            var imageId = await _productService.AddImages(productId, request);
             if (imageId == 0)
                 return BadRequest();
 
-            var image = await _manageProductService.GetImageById(imageId);
+            var image = await _productService.GetImageById(imageId);
 
             return CreatedAtAction(nameof(GetImageById), new { id = imageId }, image);
         }
@@ -107,7 +108,7 @@ namespace RookieShop.BackendApi.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _manageProductService.UpdateImages(imageId, request);
+            var result = await _productService.UpdateImages(imageId, request);
             if (imageId == 0)
                 return BadRequest();
 
@@ -121,7 +122,7 @@ namespace RookieShop.BackendApi.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _manageProductService.RemoveImages(imageId);
+            var result = await _productService.RemoveImages(imageId);
             if (result == 0)
                 return BadRequest();
 
@@ -131,10 +132,17 @@ namespace RookieShop.BackendApi.Controllers
         [HttpGet("{productId}/image/{imageId}")]
         public async Task<IActionResult> GetImageById(int productId, int imageId)
         {
-            var image = await _manageProductService.GetImageById(imageId);
+            var image = await _productService.GetImageById(imageId);
             if (image == null)
                 return BadRequest("Cannot find product");
             return Ok(image);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var products = await _productService.GetList();
+            return Ok(products);
         }
     }
 }

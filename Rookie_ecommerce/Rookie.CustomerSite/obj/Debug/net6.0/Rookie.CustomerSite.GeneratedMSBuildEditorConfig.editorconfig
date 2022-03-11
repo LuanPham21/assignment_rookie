@@ -11,34 +11,42 @@ build_property.RootNamespace = Rookie.CustomerSite
 build_property.ProjectDir = D:\NashTech\assignment_rookie\Rookie_ecommerce\Rookie.CustomerSite\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\NashTech\assignment_rookie\Rookie_ecommerce\Rookie.CustomerSite
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Pages/Components/ShowProduct/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xTaG93UHJvZHVjdFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Pages/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Pages/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Pages/ProductDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-73tyw9obh2
+[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NashTech/assignment_rookie/Rookie_ecommerce/Rookie.CustomerSite/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
