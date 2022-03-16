@@ -18,5 +18,6 @@ namespace RookieShop.Data.Entities
         public List<OrderDetail> OrderDetails { get; set; }
         public List<Cart> Carts { get; set; }
         public List<Image> Images { get; set; }
+        public List<Rate> Rates { get; set; }
     }
 }

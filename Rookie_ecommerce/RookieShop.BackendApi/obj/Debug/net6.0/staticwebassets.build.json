@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uIc+1Pc82YUfWrIBuMEw09lwTZGwsE0lDbQqxdqpMHg=",
+  "Hash": "qEzYqzNN7aeyvjNn98nGp3wEj57dmAFEl5EMXh5zkJo=",
   "Source": "RookieShop.BackendApi",
   "BasePath": "_content/RookieShop.BackendApi",
   "Mode": "Default",
@@ -1292,6 +1292,23 @@
       "OriginalItemSpec": "wwwroot\\user-content\\d876f686-ecea-4e28-ad04-b1b809637f7c.png"
     },
     {
+      "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\user-content\\f5f5a6f9-0b49-4cfd-9304-4f5310122b9d.png",
+      "SourceId": "RookieShop.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\",
+      "BasePath": "_content/RookieShop.BackendApi",
+      "RelativePath": "user-content/f5f5a6f9-0b49-4cfd-9304-4f5310122b9d.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-content\\f5f5a6f9-0b49-4cfd-9304-4f5310122b9d.png"
+    },
+    {
       "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\user-content\\f9c553b7-9456-425f-a1f3-a9a8b72c8406.png",
       "SourceId": "RookieShop.BackendApi",
       "SourceType": "Discovered",
@@ -1307,6 +1324,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\user-content\\f9c553b7-9456-425f-a1f3-a9a8b72c8406.png"
+    },
+    {
+      "Identity": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\user-content\\fcf88813-d178-47e3-8c2c-5b302764f6db.png",
+      "SourceId": "RookieShop.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.BackendApi\\wwwroot\\",
+      "BasePath": "_content/RookieShop.BackendApi",
+      "RelativePath": "user-content/fcf88813-d178-47e3-8c2c-5b302764f6db.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-content\\fcf88813-d178-47e3-8c2c-5b302764f6db.png"
     }
   ]
 }

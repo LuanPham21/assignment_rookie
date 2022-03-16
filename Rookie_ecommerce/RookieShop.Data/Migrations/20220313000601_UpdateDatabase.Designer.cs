@@ -12,8 +12,8 @@ using RookieShop.Data.EF;
 namespace RookieShop.Data.Migrations
 {
     [DbContext(typeof(EcommerceDbContext))]
-    [Migration("20220225045201_SeedIdentityUser")]
-    partial class SeedIdentityUser
+    [Migration("20220313000601_UpdateDatabase")]
+    partial class UpdateDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -156,7 +156,7 @@ namespace RookieShop.Data.Migrations
                         new
                         {
                             Id = new Guid("84c8304c-c52a-42bf-a985-36fb0b00743b"),
-                            ConcurrencyStamp = "62c72394-3a3d-421a-870f-61f72df95197",
+                            ConcurrencyStamp = "07db0533-87e2-4ab9-9be8-3dd8acc2507d",
                             Description = "Adminstrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -178,7 +178,7 @@ namespace RookieShop.Data.Migrations
                     b.Property<DateTime>("Dob")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 2, 25, 11, 52, 0, 6, DateTimeKind.Local).AddTicks(3253));
+                        .HasDefaultValue(new DateTime(2022, 3, 13, 7, 6, 1, 197, DateTimeKind.Local).AddTicks(2835));
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -235,7 +235,7 @@ namespace RookieShop.Data.Migrations
                         {
                             Id = new Guid("5a33f896-2359-44ff-82fd-b6d33786ac2a"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "05dbbcc0-51a4-4e48-bb9f-b28a30ccfc19",
+                            ConcurrencyStamp = "b965903f-9bb1-4eef-9ff0-d06236e996c0",
                             Dob = new DateTime(2022, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "luanhuu2000@gmail.com",
                             EmailConfirmed = true,
@@ -244,7 +244,7 @@ namespace RookieShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "luanhuu2000@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAELkK+rKN9TI16U2ksVGZUIlDQwpjy76rznLKdXSLvB2N8IH0SICn0b8iI6yUJp9GIQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELn4fLgwjuDf4pvhnLYzU8Yv9AuFe9P8/USUo3gzSOCrWz1xO5ygkDYnO6A0OHl5fA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -368,11 +368,21 @@ namespace RookieShop.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Caption")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ImageLink")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SortOrder")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -391,9 +401,7 @@ namespace RookieShop.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("OrdersDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 2, 25, 11, 52, 0, 5, DateTimeKind.Local).AddTicks(757));
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -488,9 +496,7 @@ namespace RookieShop.Data.Migrations
                         .HasDefaultValue(1);
 
                     b.Property<DateTime>("TimeCreate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 2, 25, 11, 52, 0, 5, DateTimeKind.Local).AddTicks(8969));
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("ViewCount")
                         .ValueGeneratedOnAdd()
@@ -512,7 +518,7 @@ namespace RookieShop.Data.Migrations
                             Price = 20000m,
                             Quantity = 100,
                             Status = 1,
-                            TimeCreate = new DateTime(2022, 2, 25, 11, 52, 0, 6, DateTimeKind.Local).AddTicks(5736),
+                            TimeCreate = new DateTime(2022, 3, 13, 7, 6, 1, 197, DateTimeKind.Local).AddTicks(9217),
                             ViewCount = 1
                         },
                         new
@@ -525,7 +531,7 @@ namespace RookieShop.Data.Migrations
                             Price = 20000m,
                             Quantity = 100,
                             Status = 1,
-                            TimeCreate = new DateTime(2022, 2, 25, 11, 52, 0, 6, DateTimeKind.Local).AddTicks(5741),
+                            TimeCreate = new DateTime(2022, 3, 13, 7, 6, 1, 197, DateTimeKind.Local).AddTicks(9226),
                             ViewCount = 1
                         });
                 });
@@ -555,6 +561,36 @@ namespace RookieShop.Data.Migrations
                             ProductId = 2,
                             CategoryId = 2
                         });
+                });
+
+            modelBuilder.Entity("RookieShop.Data.Entities.Rate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Rates", (string)null);
                 });
 
             modelBuilder.Entity("RookieShop.Data.Entities.Cart", b =>
@@ -636,11 +672,32 @@ namespace RookieShop.Data.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("RookieShop.Data.Entities.Rate", b =>
+                {
+                    b.HasOne("RookieShop.Data.Entities.Product", "Product")
+                        .WithMany("Rates")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RookieShop.Data.Entities.AppUser", "AppUser")
+                        .WithMany("Rates")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("RookieShop.Data.Entities.AppUser", b =>
                 {
                     b.Navigation("Carts");
 
                     b.Navigation("Orders");
+
+                    b.Navigation("Rates");
                 });
 
             modelBuilder.Entity("RookieShop.Data.Entities.Category", b =>
@@ -662,6 +719,8 @@ namespace RookieShop.Data.Migrations
                     b.Navigation("OrderDetails");
 
                     b.Navigation("ProductsInCategories");
+
+                    b.Navigation("Rates");
                 });
 #pragma warning restore 612, 618
         }

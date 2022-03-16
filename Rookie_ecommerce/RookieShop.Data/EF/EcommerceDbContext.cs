@@ -12,12 +12,12 @@ using RookieShop.Data.Extensions;
 
 namespace RookieShop.Data.EF
 {
-    public class EcommerceDbContext : IdentityDbContext<AppUser,AppRole,Guid>
+    public class EcommerceDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         public EcommerceDbContext(DbContextOptions options) : base(options)
         {
-
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Configure using Fluent API
@@ -33,16 +33,19 @@ namespace RookieShop.Data.EF
             modelBuilder.ApplyConfiguration(new AppUserConfiguration());
             modelBuilder.ApplyConfiguration(new AppRoleConfiguration());
 
+            modelBuilder.ApplyConfiguration(new RateConfiguration());
+
             modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("AppUserClaims");
-            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("AppUserRoles").HasKey(x=> new {x.UserId, x.RoleId});
-            modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("AppUserLogins").HasKey(x=>x.UserId);
-            
+            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("AppUserRoles").HasKey(x => new { x.UserId, x.RoleId });
+            modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("AppUserLogins").HasKey(x => x.UserId);
+
             modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("AppRoleClaims");
-            modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x=>x.UserId);
+            modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x => x.UserId);
             //Data seeding
             modelBuilder.Seed();
             //base.OnModelCreating(modelBuilder);
         }
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<ProductsInCategory> ProductsInCategories { get; set; }
@@ -51,6 +54,6 @@ namespace RookieShop.Data.EF
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-
+        public DbSet<Rate> Rates { get; set; }
     }
 }

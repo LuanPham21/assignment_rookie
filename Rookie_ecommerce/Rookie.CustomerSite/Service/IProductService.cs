@@ -10,5 +10,7 @@ namespace Rookie.CustomerSite.Service
         public Task<ProductViewModel> GetById(int productId);
 
         public Task<List<ProductViewModel>> GetProductinCategory(int CategoryId);
+
+        public Task<List<ProductViewModel>> GetByName(string? name);
     }
 }

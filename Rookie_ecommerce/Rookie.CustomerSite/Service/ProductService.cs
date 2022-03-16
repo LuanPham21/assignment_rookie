@@ -14,6 +14,12 @@ namespace Rookie.CustomerSite.Service
             return JsonConvert.DeserializeObject<ProductViewModel>(await JsonResponseByGet(url));
         }
 
+        public async Task<List<ProductViewModel>> GetByName(string? name)
+        {
+            var url = $"https://localhost:5000/api/Products/name?name={name}";
+            return JsonConvert.DeserializeObject<List<ProductViewModel>>(await JsonResponseByGet(url));
+        }
+
         public async Task<List<ProductViewModel>> GetListAsync()
         {
             var url = "https://localhost:5000/api/Products";
@@ -22,7 +28,7 @@ namespace Rookie.CustomerSite.Service
 
         public async Task<List<ProductViewModel>> GetProductinCategory(int CategoryId)
         {
-            var url = "https://localhost:5000/api/Products/paging?CategoryId/{CategoryId}";
+            var url = $"https://localhost:5000/api/Products/paging?CategoryId={CategoryId}";
             return JsonConvert.DeserializeObject<List<ProductViewModel>>(await JsonResponseByGet(url));
         }
 

@@ -1,6 +1,7 @@
 ﻿using RookieShop.Data.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,10 @@ namespace RookieShop.ViewModel.Catalog.Products
     public class ProductViewModel
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "UID is required")]
         public string Name { get; set; }
+
         public int Quantity { get; set; }
         public decimal OriginalPrice { get; set; }
         public decimal Price { get; set; }
