@@ -40,7 +40,7 @@ namespace RookieShop.BackendApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
+        public async Task<IActionResult> Create([FromBody] ProductCreateRequest request)
         {
             if (!ModelState.IsValid)
             {
@@ -142,6 +142,13 @@ namespace RookieShop.BackendApi.Controllers
         public async Task<IActionResult> GetAll()
         {
             var products = await _productService.GetList();
+            return Ok(products);
+        }
+
+        [HttpGet("name")]
+        public async Task<IActionResult> GetByName([FromQuery] string? name)
+        {
+            var products = await _productService.GetByName(name);
             return Ok(products);
         }
     }

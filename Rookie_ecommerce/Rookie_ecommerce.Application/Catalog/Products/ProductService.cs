@@ -356,7 +356,36 @@ namespace Rookie_ecommerce.Application.Catalog.Products
                     Price = product.p.Price,
                     Quantity = product.p.Quantity,
                     ViewCount = product.p.ViewCount,
-                    ThumbnailImage = product.pi.ImageLink,
+                    ThumbnailImage = "https://localhost:5000/user-content/" + product.pi.ImageLink,
+                };
+
+                listvm.Add(productViewModel);
+            }
+            return listvm;
+        }
+
+        public async Task<List<ProductViewModel>> GetByName(string? name)
+        {
+            var query = from p in _context.Products
+                        join pi in _context.Images on p.Id equals pi.ProductId
+                        where p.Name == name
+                        select new { p, pi };
+
+            List<ProductViewModel> listvm = new List<ProductViewModel>();
+            foreach (var product in query)
+            {
+                var productViewModel = new ProductViewModel()
+                {
+                    Id = product.p.Id,
+                    TimeCreate = product.p.TimeCreate,
+                    Description = product.p.Description,
+                    Details = product.p.Details,
+                    Name = product.p.Name,
+                    OriginalPrice = product.p.OriginalPrice,
+                    Price = product.p.Price,
+                    Quantity = product.p.Quantity,
+                    ViewCount = product.p.ViewCount,
+                    ThumbnailImage = "https://localhost:5000/user-content/" + product.pi.ImageLink,
                 };
 
                 listvm.Add(productViewModel);

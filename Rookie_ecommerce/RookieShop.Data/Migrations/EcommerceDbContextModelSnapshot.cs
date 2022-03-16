@@ -154,7 +154,7 @@ namespace RookieShop.Data.Migrations
                         new
                         {
                             Id = new Guid("84c8304c-c52a-42bf-a985-36fb0b00743b"),
-                            ConcurrencyStamp = "d9f84124-4989-46a2-9ce0-50de2aa7172e",
+                            ConcurrencyStamp = "07db0533-87e2-4ab9-9be8-3dd8acc2507d",
                             Description = "Adminstrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -176,7 +176,7 @@ namespace RookieShop.Data.Migrations
                     b.Property<DateTime>("Dob")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 3, 3, 19, 16, 57, 809, DateTimeKind.Local).AddTicks(8312));
+                        .HasDefaultValue(new DateTime(2022, 3, 13, 7, 6, 1, 197, DateTimeKind.Local).AddTicks(2835));
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -233,7 +233,7 @@ namespace RookieShop.Data.Migrations
                         {
                             Id = new Guid("5a33f896-2359-44ff-82fd-b6d33786ac2a"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "eff71da9-499a-45ee-8d71-59f15f02e3bd",
+                            ConcurrencyStamp = "b965903f-9bb1-4eef-9ff0-d06236e996c0",
                             Dob = new DateTime(2022, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "luanhuu2000@gmail.com",
                             EmailConfirmed = true,
@@ -242,7 +242,7 @@ namespace RookieShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "luanhuu2000@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKTDhcTc2AmlLTasRzR/bSLM00NqZIoG0EoBkTTirlytPnbCOHO2WsihNs7lB1nfjg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELn4fLgwjuDf4pvhnLYzU8Yv9AuFe9P8/USUo3gzSOCrWz1xO5ygkDYnO6A0OHl5fA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -516,7 +516,7 @@ namespace RookieShop.Data.Migrations
                             Price = 20000m,
                             Quantity = 100,
                             Status = 1,
-                            TimeCreate = new DateTime(2022, 3, 3, 19, 16, 57, 810, DateTimeKind.Local).AddTicks(393),
+                            TimeCreate = new DateTime(2022, 3, 13, 7, 6, 1, 197, DateTimeKind.Local).AddTicks(9217),
                             ViewCount = 1
                         },
                         new
@@ -529,7 +529,7 @@ namespace RookieShop.Data.Migrations
                             Price = 20000m,
                             Quantity = 100,
                             Status = 1,
-                            TimeCreate = new DateTime(2022, 3, 3, 19, 16, 57, 810, DateTimeKind.Local).AddTicks(398),
+                            TimeCreate = new DateTime(2022, 3, 13, 7, 6, 1, 197, DateTimeKind.Local).AddTicks(9226),
                             ViewCount = 1
                         });
                 });
@@ -559,6 +559,36 @@ namespace RookieShop.Data.Migrations
                             ProductId = 2,
                             CategoryId = 2
                         });
+                });
+
+            modelBuilder.Entity("RookieShop.Data.Entities.Rate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Rates", (string)null);
                 });
 
             modelBuilder.Entity("RookieShop.Data.Entities.Cart", b =>
@@ -640,11 +670,32 @@ namespace RookieShop.Data.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("RookieShop.Data.Entities.Rate", b =>
+                {
+                    b.HasOne("RookieShop.Data.Entities.Product", "Product")
+                        .WithMany("Rates")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RookieShop.Data.Entities.AppUser", "AppUser")
+                        .WithMany("Rates")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("RookieShop.Data.Entities.AppUser", b =>
                 {
                     b.Navigation("Carts");
 
                     b.Navigation("Orders");
+
+                    b.Navigation("Rates");
                 });
 
             modelBuilder.Entity("RookieShop.Data.Entities.Category", b =>
@@ -666,6 +717,8 @@ namespace RookieShop.Data.Migrations
                     b.Navigation("OrderDetails");
 
                     b.Navigation("ProductsInCategories");
+
+                    b.Navigation("Rates");
                 });
 #pragma warning restore 612, 618
         }

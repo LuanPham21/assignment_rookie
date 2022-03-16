@@ -15,26 +15,6 @@
                 </div>
             </div>
         </div>
-@*        <div class="row">
-            <div class="col-lg-12">
-                <div class="special-menu text-center">
-                    <div class="button-group filter-button-group">
-                        @for (int i = 0; i < @Model.Product.Count; i++)
-                        {
-                            var item = @Model.Product[i];
-                            if (i == 0)
-                            {
-                                <button class="active" data-filter=".@item.Id">@item.Name</button>
-                            }
-                            else
-                            {
-                                <button data-filter=".@item.Id">@item.Name</button>
-                            }
-                        }
-                    </div>
-                </div>
-            </div>
-        </div>*@
         @await Component.InvokeAsync("ShowProduct", Model.Product);
     </div>
 </div>

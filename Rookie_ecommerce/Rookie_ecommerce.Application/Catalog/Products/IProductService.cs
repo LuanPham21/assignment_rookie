@@ -20,6 +20,8 @@ namespace Rookie_ecommerce.Application.Catalog.Products
 
         Task<ProductViewModel> GetById(int productId);
 
+        Task<List<ProductViewModel>> GetByName(string? name);
+
         Task<bool> UpdatePrice(int productId, decimal newPrice);
 
         Task<bool> UpdateStock(int productId, int addedQuantity);

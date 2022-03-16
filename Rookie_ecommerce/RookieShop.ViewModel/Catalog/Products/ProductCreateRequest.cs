@@ -19,6 +19,6 @@ namespace RookieShop.ViewModel.Catalog.Products
         public Status Status { get; set; }
         public int ViewCount { get; set; }
         public string Details { set; get; }
-        public IFormFile ThumnailImage { get; set; }
+        public IFormFile? ThumnailImage { get; set; }
     }
 }

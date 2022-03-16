@@ -18,11 +18,22 @@ builder.Services.AddDbContext<EcommerceDbContext>(options =>
 builder.Services.AddTransient<IStorageService, FileStorageService>();
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<ICategoryService, CategoryService>();
-
+builder.Services.AddTransient<IRatingService, RatingService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger eCommerce Rookie", Version = "v1" });
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowOrigins",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:3000")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
 });
 var app = builder.Build();
 // Configure the HTTP request pipeline.
@@ -50,7 +61,7 @@ app.UseSwaggerUI(c =>
 });
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseCors("AllowOrigins");
 app.UseRouting();
 
 app.UseAuthorization();
