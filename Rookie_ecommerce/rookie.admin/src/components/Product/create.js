@@ -1,79 +1,161 @@
-import React, { useState } from 'react';
-import { Button, Checkbox, Form } from 'semantic-ui-react'
-import axios from 'axios';
+import React, { useState } from "react";
+import { Button, Table, Form } from "semantic-ui-react";
+import { add } from "../../services/productService";
+import { Link } from "react-router-dom";
 export default function Create() {
-    const [Name, setName] = useState("");
-    const [Quantity, setQuantity] = useState('');
-    const [OriginalPrice, setOriginalPrice] = useState('');
-    const [Price, setPrice] = useState('');
-    const [Description, setDescription] = useState('');
-    // const [TimeCreate, setTimeCreate] = useState('');
-    const [Status, setStatus] = useState();
-    const [ViewCount, setViewCount] = useState('');
-    const [Details, setDetails] = useState('');
-    const [thumnailImage, setThumbnailImage] = useState('');
-    const postData = async () => {
-         await axios.post("https://localhost:5000/api/Products", {
-            Name,
-            Quantity,
-            OriginalPrice,
-            Price,
-            Description,
-            TimeCreate:new Date().toISOString(),
-            Status,
-            ViewCount,
-            Details,
-            thumnailImage
-        })       
-    }
-    return (
-        <div>
-            <Form className="create-form">
-                <Form.Field>
-                    <label>First Name</label>
-                    <input placeholder='First Name' onChange={(e) => setName(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <label>Quantity</label>
-                    <input placeholder='Quantity' onChange={(e) => setQuantity(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <label>OriginalPrice</label>
-                    <input placeholder='OriginalPrice' onChange={(e) => setOriginalPrice(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <label>Price</label>
-                    <input placeholder='Price' onChange={(e) => setPrice(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <label>Description</label>
-                    <input placeholder='Description' onChange={(e) => setDescription(e.target.value)}/>
-                </Form.Field>
-                {/* <Form.Field>
-                    <label>TimeCreate</label>
-                    <input placeholder='TimeCreate' readonly onChange={(e) => setTimeCreate(e.target.value)}/>
-                </Form.Field> */}
-                <Form.Field>
-                    <label>Status</label>
-                    <select>
-                        <option onChange={(e) => setStatus(e.target.value = 0)}>InActive</option>
-                        <option onChange={(e) => setStatus(e.target.value = 1)}>Active</option>
-                    </select>
-                </Form.Field>
-                <Form.Field>
-                    <label>ViewCount</label>
-                    <input placeholder='ViewCount' onChange={(e) => setViewCount(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <label>Details</label>
-                    <input placeholder='Details' onChange={(e) => setDetails(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <label>ThumbnailImage</label>
-                    <input type="file" onChange={(e) => setThumbnailImage(e.target.value)}/>
-                </Form.Field>
-                <Button onClick={postData} type='submit'>Submit</Button>
-            </Form>
+  const [product, setProduct] = useState({
+    Name: "",
+    Quantity: "",
+    OriginalPrice: "",
+    Price: "",
+    Description: "",
+    TimeCreate: new Date().toISOString(),
+    Status: "",
+    ViewCount: 0,
+    Details: "",
+    ThumnailImage: null,
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProduct((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  const handleChangeFile = (e) => {
+    const { name, files } = e.target;
+    setProduct((prevState) => ({
+      ...prevState,
+      [name]: files[0],
+    }));
+  };
+
+  const btnOnClick = async () => {
+    var bodyFormData = new FormData();
+    bodyFormData.append("Name", product.Name);
+    bodyFormData.append("Quantity", product.Quantity);
+    bodyFormData.append("OriginalPrice", product.OriginalPrice);
+    bodyFormData.append("Price", product.Price);
+    bodyFormData.append("Description", product.Description);
+    bodyFormData.append("TimeCreate", product.TimeCreate);
+    bodyFormData.append("Status", product.Status);
+    bodyFormData.append("ViewCount", product.ViewCount);
+    bodyFormData.append("Details", product.Details);
+    bodyFormData.append("ThumnailImage", product.ThumnailImage);
+    const response = await add(bodyFormData);
+    console.log(response);
+  };
+
+  return (
+    <div>
+      <h1 className="text-center mb-5 text-uppercase">
+        <Link to={`/category`} className="category-link">
+          <Table.Cell>
+            <Button className="btn btn-primary ">
+              <i class="fas fa-arrow-left btn-back"></i>
+            </Button>
+          </Table.Cell>
+        </Link>
+        Create Product
+      </h1>
+      <div className="container">
+        <div className="row category-row ">
+          <div className="col-lg-10">
+            <div class="card">
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    value={product.Name}
+                    name="Name"
+                    onChange={handleChange}
+                    className="input-category"
+                    class="form-control"
+                  />
+                  <label>Original Price</label>
+                  <input
+                    placeholder="OriginalPrice"
+                    value={product.OriginalPrice}
+                    name="OriginalPrice"
+                    onChange={handleChange}
+                    class="form-control"
+                  />
+                  <label>Price</label>
+                  <input
+                    placeholder="Price"
+                    value={product.Price}
+                    name="Price"
+                    onChange={handleChange}
+                    class="form-control"
+                  />
+                  <label>Description</label>
+                  <textarea
+                    placeholder="Description"
+                    value={product.Description}
+                    name="Description"
+                    onChange={handleChange}
+                    class="form-control"
+                    rows="3"
+                  ></textarea>
+                  <label>Quantity</label>
+                  <input
+                    type="text"
+                    placeholder="Quantity"
+                    value={product.Quantity}
+                    name="Quantity"
+                    onChange={handleChange}
+                    className="input-category"
+                    class="form-control"
+                  />
+                  <label>Status</label>
+                  <select name="cars" class="custom-select">
+                    <option
+                      value={(product.Status = 0)}
+                      name="Status"
+                      onChange={handleChange}
+                    >
+                      InActive
+                    </option>
+                    <option
+                      value={(product.Status = 1)}
+                      name="Status"
+                      onChange={handleChange}
+                    >
+                      Active
+                    </option>
+                  </select>
+                  <label>Details</label>
+                  <textarea
+                    placeholder="Details"
+                    value={product.Details}
+                    name="Details"
+                    onChange={handleChange}
+                    class="form-control"
+                    rows="3"
+                  ></textarea>
+                  <label>ThumbnailImage</label>
+                  <input
+                    type="file"
+                    name="ThumnailImage"
+                    height={150}
+                    onChange={handleChangeFile}
+                    class="form-control"
+                  />
+                </div>
+                <button
+                  onClick={btnOnClick}
+                  type="submit"
+                  class="btn btn-success mt-3"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }

@@ -1,0 +1,15 @@
+.category-row{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-back{
+    font-size: 30px;
+}
+
+.category-link{
+    float: left;
+    margin-left: 20px;
+
+}
+

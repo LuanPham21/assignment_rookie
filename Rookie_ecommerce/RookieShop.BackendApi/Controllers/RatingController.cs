@@ -27,5 +27,12 @@ namespace RookieShop.BackendApi.Controllers
             await _ratingService.InsertRating(request);
             return Ok();
         }
+
+        [HttpGet("paging")]
+        public async Task<IActionResult> GetByProduct([FromQuery] int productId)
+        {
+            var products = await _ratingService.GetByProduct(productId);
+            return Ok(products);
+        }
     }
 }

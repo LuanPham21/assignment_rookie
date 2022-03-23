@@ -1,19 +1,28 @@
-// import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import "./App.css";
-import Product from "./pages/Product";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import Create from './components/Product/create';
+import Product from "./pages/Product";
+import Category from "./pages/Category";
+import { BrowserRouter as Router, Route, BrowserRouter, Link,Switch } from "react-router-dom";
+import Update  from "./components/product/update";
+import Create from './components/product/create';
+import CreateCate from './components/category/create';
+import UpdateCate from './components/category/update';
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/create" element={<Create/>}/>
-        </Routes>
-      </Router>
+    <div>
+      <BrowserRouter>
+        <Switch>
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route exact path="/" component={Home} />
+            <Route path="/product" component={Product} />
+            <Route path="/category" component={Category} />
+            <Route path="/addpro" component={Create}/>
+            <Route path="/editpro/:id?" component={Update}/>
+            <Route path="/addcate" component={CreateCate}/>
+            <Route path="/editcate/:id?" component={UpdateCate}/>
+          </Switch>
+      </BrowserRouter>
     </div>
   );
 }

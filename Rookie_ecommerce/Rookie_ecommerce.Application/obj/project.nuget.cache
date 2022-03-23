@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Z76tRclNJ2DWVQXryUWzhE8uUvcNXt9xu1slShGPbjNcdloAuYv5+/3B8zA/OhorQCxVU8gwajXSejKf1gQkOQ==",
+  "dgSpecHash": "s4dt/nPzsTU1cLTy1oKdel3o6BV62Qxy6EcVbpDhUxAqSN2sH0kl06N416dLuDA8D/sjJFi781vpwjNdnyZJWA==",
   "success": true,
   "projectFilePath": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\Rookie_ecommerce.Application\\Rookie_ecommerce.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.4.0\\fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.2\\microsoft.aspnetcore.cryptography.internal.6.0.2.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.2\\microsoft.aspnetcore.cryptography.keyderivation.6.0.2.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.14\\microsoft.aspnetcore.http.features.5.0.14.nupkg.sha512",

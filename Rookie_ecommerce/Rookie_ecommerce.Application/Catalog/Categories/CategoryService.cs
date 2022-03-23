@@ -1,4 +1,6 @@
 ﻿using RookieShop.Data.EF;
+using RookieShop.Data.Entities;
+using RookieShop.Utilities.Exeptions;
 using RookieShop.ViewModel.Catalog.Categories;
 using System;
 using System.Collections.Generic;
@@ -18,6 +20,19 @@ namespace Rookie_ecommerce.Application.Catalog.Categories
             _context = context;
         }
 
+        public async Task<int> Create(CategoriesCreateRequest request)
+        {
+            var cate = new Category()
+            {
+                Name = request.Name,
+                ParentId = request.ParentId,
+                Status = request.Status,
+            };
+            _context.Categories.Add(cate);
+            await _context.SaveChangesAsync();
+            return cate.Id;
+        }
+
         public async Task<List<CategoryVm>> GetAll()
         {
             var query = from c in _context.Categories
@@ -29,7 +44,8 @@ namespace Rookie_ecommerce.Application.Catalog.Categories
                 {
                     Id = cate.c.Id,
                     Name = cate.c.Name,
-                    ParentId = cate.c.ParentId
+                    ParentId = cate.c.ParentId,
+                    Status = cate.c.Status
                 };
 
                 listvm.Add(categgoryViewModel);
@@ -44,9 +60,21 @@ namespace Rookie_ecommerce.Application.Catalog.Categories
             {
                 Id = cate.Id,
                 Name = cate.Name,
-                ParentId = cate.ParentId
+                ParentId = cate.ParentId,
+                Status = cate.Status
             };
             return categgoryViewModel;
+        }
+
+        public async Task<int> Update(CategoriesUpdateRequest request)
+        {
+            var cate = await _context.Categories.FindAsync(request.Id);
+            if (cate == null)
+                throw new RookieShopException($"Cannot find a cate with id: {request.Id}");
+            cate.Name = request.Name;
+            cate.ParentId = request.ParentId;
+            cate.Status = request.Status;
+            return await _context.SaveChangesAsync();
         }
     }
 }

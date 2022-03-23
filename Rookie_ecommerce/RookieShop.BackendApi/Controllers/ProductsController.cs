@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Rookie_ecommerce.Application.Catalog.Products;
 using RookieShop.ViewModel.Catalog.ProductImages;
@@ -40,7 +41,8 @@ namespace RookieShop.BackendApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] ProductCreateRequest request)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
         {
             if (!ModelState.IsValid)
             {
@@ -49,11 +51,12 @@ namespace RookieShop.BackendApi.Controllers
             var productId = await _productService.Create(request);
             if (productId == 0)
                 return BadRequest();
-            var product = await _productService.GetById(productId);
-            return CreatedAtAction(nameof(GetById), new { id = productId }, product);
+            //var product = await _productService.GetById(productId);
+            return CreatedAtAction(nameof(GetById), new { id = productId });
         }
 
         [HttpPut]
+        [Consumes("multipart/form-data")]
         public async Task<IActionResult> Update([FromForm] ProductUpdateRequest request)
         {
             if (!ModelState.IsValid)

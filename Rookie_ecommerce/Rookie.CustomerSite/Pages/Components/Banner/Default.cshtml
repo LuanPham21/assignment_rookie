@@ -1,0 +1,29 @@
+﻿@using RookieShop.ViewModel.Catalog.Products;
+@model List<ProductViewModel>
+@{
+}
+<div id="slides-shop" class="cover-slides">
+    @foreach (var item in Model)
+    {
+        <ul class="slides-container">
+            <li class="text-left">
+                <img src="@item.ThumbnailImage" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
+                            <p class="m-b-40">@item.Name</p>
+                            <p class="m-b-40">@item.Description</p>
+                            <p><a class="btn hvr-hover" href="/Detail/@item.Id">Shop New</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slides-navigation">
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        </div>
+
+    }
+</div>

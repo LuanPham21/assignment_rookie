@@ -5,6 +5,12 @@ namespace Rookie.CustomerSite.Service
 {
     public class RatingService : IRatingService
     {
+        public async Task<List<RatingVM>> GetByProduct(int productId)
+        {
+            var url = $"https://localhost:5000/api/Rating/paging?productId={productId}";
+            return JsonConvert.DeserializeObject<List<RatingVM>>(await JsonResponseByGet(url));
+        }
+
         public async Task<int> InsertRating(RatingVM request)
         {
             var url = $"https://localhost:5000/api/Rating?Rating={request.Rating}&Description={request.Description}&ProductId={request.ProductId}&UserId={request.UserId}";

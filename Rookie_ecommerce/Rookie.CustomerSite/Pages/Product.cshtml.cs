@@ -30,8 +30,14 @@ namespace Rookie.CustomerSite.Pages
 
         public async Task OnGet(string keyword, string category)
         {
-            Product = await _productService.GetByName(keyword);
-
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                Product = await _productService.GetByName(keyword);
+            }
+            else
+            {
+                Product=await _productService.GetListAsync();
+            } 
             Category = await _categorySevice.GetAll();
             CategoryId = category;
             if (!string.IsNullOrEmpty(category))

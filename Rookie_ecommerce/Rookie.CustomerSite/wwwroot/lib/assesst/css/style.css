@@ -318,6 +318,10 @@
          position: relative;
          top: -15px;
     }
+    .btn{
+        color:white !important;
+        background-color:white;
+    }
     /* Navbar Sidebar ------*/
      nav.navbar-sidebar ul.nav, nav.navbar-sidebar .navbar-brand{
          margin-bottom: 50px;

@@ -12,5 +12,9 @@ namespace Rookie_ecommerce.Application.Catalog.Categories
         Task<List<CategoryVm>> GetAll();
 
         Task<CategoryVm> GetById(int id);
+
+        Task<int> Create(CategoriesCreateRequest request);
+
+        Task<int> Update(CategoriesUpdateRequest request);
     }
 }
