@@ -212,6 +212,7 @@ namespace Rookie_ecommerce.Application.Catalog.Products
             product.OriginalPrice = request.OriginalPrice;
             product.Status = request.Status;
             product.ViewCount = request.ViewCount;
+            product.Price = request.Price;
 
             if (request.ThumnailImage != null)
             {

@@ -38,9 +38,37 @@
                 <div class="single-product-details">
                     <h2>@Html.DisplayFor(model => model.Product.Name)</h2>
                     <h5>$@Html.DisplayFor(model => model.Product.Price)</h5>
-                    <p class="available-stock"><span>@Html.DisplayFor(model => model.Product.Quantity)/ <a href="#">8 sold </a></span>
-                    <p>
-                        <h4>@Html.DisplayFor(model => model.Product.Description)</h4>
+                    <p class="available-stock">
+                        <span>@Html.DisplayFor(model => model.Product.Quantity)/</span>
+                        @if (Model.Rating.Count() != 0)
+                        {
+                            for (var i = 1; i <= Math.Ceiling(Model.Rating.Select(m => m.Rating).Average()); i++)
+                            {
+                                <i class="fas fa-star"></i>
+                            }
+                            for (var i = (Math.Ceiling(Model.Rating.Select(m => m.Rating).Average()) + 1); i <= 5; i++)
+                            {
+                                <i class="far fa-star"></i>
+                            }
+                        }
+                        else
+                        {
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        }
+                        @if (Model.Rating.Count() == 0)
+                        {
+                            <small class="pt-1">Not Rating Yet</small>
+                        }
+                        else
+                        {
+
+                            <small class="pt-1">(@Model.Rating.Count() Reviews)</small>
+                        }
+                    <p><h4>@Html.DisplayFor(model => model.Product.Description)</h4>
                     <p>@Html.DisplayFor(model => model.Product.Details)</p>
                     <ul>
                         <li>
@@ -89,7 +117,63 @@
                 </div>
             </div>
         </div>
+        <form method="post" asp-controller="Rating" asp-action="Index">
+            <div class="d-flex my-3">
+                <p class="mb-0 mr-2">Your Rating * :</p>
+                <div class="text-primary">
+                    <a type="radio" onclick="CRate(1)" class="ratingStar fas fa-star" value="1"></a>
+                    <a type="radio" onclick="CRate(2)" class="ratingStar fas fa-star" value="2"></a>
+                    <a type="radio" onclick="CRate(3)" class="ratingStar fas fa-star" value="3"></a>
+                    <a type="radio" onclick="CRate(4)" class="ratingStar fas fa-star" value="4"></a>
+                    <a type="radio" onclick="CRate(5)" class="ratingStar fas fa-star" value="5"></a>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Review *</label>
+                <textarea id="message" name="comment" cols="30" rows="5" class="form-control"></textarea>
+            </div>
+            <div class="form-group mb-0">
+                <input id="Rating" name="rating" value="5" hidden />
+                <input name="productId" value="@Model.ProductId" hidden />
+                <input type="submit" value="Leave Your Review" class="btn btn-primary px-3">
+            </div>
+        </form>
+        <div class="row mt-3">
+            <div class="col-md-6 pre-scrollable" style="max-height:500px; overflow:auto">
+                <h4 class="mb-4">@Model.Rating.Count() Reviews for "@Model.Product.Name"</h4>
+                @foreach (var rate in Model.Rating)
+                {
+                    <div class="media mb-4">
+                        <div class="media-body">
+                            <div class="text-primary mb-2">
+                                @for (var i = 1; i <= rate.Rating; i++)
+                                {
+                                    <i class="fas fa-star"></i>
+                                }
+                                @for (var i = (rate.Rating + 1); i <= 5; i++)
+                                {
+                                    <i class="far fa-star"></i>
+                                }
+                            </div>
+                            <p>@rate.Description</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
     </div>
-</div>
-<!-- End Cart -->
+    <!-- End Cart -->
+    @section scripts{
+    <script>
+        $(".ratingStar").hover(function () {
+            $(".ratingStar").addClass("far").removeClass("fas");
 
+            $(this).addClass("fas").removeClass("far");
+            $(this).prevAll(".ratingStar").addClass("fas").removeClass("far");
+        });
+        function CRate(r) {
+            $("#Rating").val(r);
+
+        }
+    </script>
+    }

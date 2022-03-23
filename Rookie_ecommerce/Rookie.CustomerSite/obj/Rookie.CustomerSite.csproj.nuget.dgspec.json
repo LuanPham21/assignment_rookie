@@ -28,6 +28,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.Utilities\\RookieShop.Utilities.csproj": {
+                "projectPath": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.Utilities\\RookieShop.Utilities.csproj"
+              },
               "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.ViewModel\\RookieShop.ViewModel.csproj": {
                 "projectPath": "D:\\NashTech\\assignment_rookie\\Rookie_ecommerce\\RookieShop.ViewModel\\RookieShop.ViewModel.csproj"
               },
@@ -47,6 +50,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.4.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -272,6 +287,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.4.0, )"
+            },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.14, )"

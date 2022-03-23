@@ -10,5 +10,7 @@ namespace Rookie_ecommerce.Application.Catalog.Products
     public interface IRatingService
     {
         Task<int> InsertRating(RatingVM request);
+
+        Task<List<RatingVM>> GetByProduct(int productId);
     }
 }
